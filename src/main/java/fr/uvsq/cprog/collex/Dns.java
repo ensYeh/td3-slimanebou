@@ -34,6 +34,39 @@ public class Dns {
         }
     }
 
+    //  Récupérer un item par nom de machine
+    public DnsItem getItem(NomMachine nomMachine) {
+        for (DnsItem item : items) {
+            if (item.getNomMachine().equals(nomMachine)) {
+                return item;
+            }
+        }
+        return null; // si pas trouvé
+    }
+
+    // Récupérer un item par adresse IP
+    public DnsItem getItem(AdresseIP adresseIP) {
+        for (DnsItem item : items) {
+            if (item.getAdresseIP().equals(adresseIP)) {
+                return item;
+            }
+        }
+        return null; // si pas trouvé
+    }
+
+
+    // Récupérer tous les items d’un domaine
+    public List<DnsItem> getItems(String domaine) {
+        List<DnsItem> result = new ArrayList<>();
+        for (DnsItem item : items) {
+            if (item.getNomMachine().getDomaine().equals(domaine)) {
+                result.add(item);
+            }
+        }
+        return result;
+    }
+
+
 
 
 
