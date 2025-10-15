@@ -66,6 +66,28 @@ public class Dns {
         return result;
     }
 
+    // Ajouter une nouvelle entrée DNS
+
+    public void addItem(AdresseIP ip, NomMachine nomMachine) throws IOException {
+        // Vérifie si l'adresse ou le nom existe déjà
+        if (getItem(ip) != null) {
+            throw new IllegalArgumentException("ERREUR : L'adresse IP existe déjà !");
+        }
+        if (getItem(nomMachine) != null) {
+            throw new IllegalArgumentException("ERREUR : Le nom de machine existe déjà !");
+        }
+
+        DnsItem item = new DnsItem(nomMachine, ip);
+        items.add(item);
+
+        // Met à jour le fichier
+        List<String> lignes = new ArrayList<>();
+        for (DnsItem i : items) {
+            lignes.add(i.getNomMachine().getNomComplet() + " " + i.getAdresseIP().getIp());
+        }
+        Files.write(fichierDns, lignes);
+    }
+
 
 
 
