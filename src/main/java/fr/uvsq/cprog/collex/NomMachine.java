@@ -7,6 +7,7 @@ public class NomMachine {
     private String domaine;     // uvsq.fr
 
     public NomMachine(String nomComplet) {
+        // la chaine contient au moins un point sinon erreur
         if (!nomComplet.contains(".")) {
             throw new IllegalArgumentException("Nom de machine invalide : " + nomComplet);
         }

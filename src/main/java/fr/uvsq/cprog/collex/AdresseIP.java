@@ -12,7 +12,7 @@ public class AdresseIP {
     }
 
     private boolean estValide(String ip) {
-        // Vérifie que l'IP a 4 octets entre 0 et 255
+        // Vérifie que l'IP a 4 octets entre 0 et 255 (expression régulière)
         String regex = "^([0-9]{1,3}\\.){3}[0-9]{1,3}$";
         if (!ip.matches(regex)) return false;
 
