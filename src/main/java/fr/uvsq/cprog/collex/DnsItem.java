@@ -19,4 +19,9 @@ public class DnsItem {
         return adresseIP;
     }
 
+    @Override
+    public String toString() {
+        return getAdresseIP() + " " + getNomMachine();
+    }
+
 }

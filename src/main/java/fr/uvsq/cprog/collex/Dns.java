@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Dns {
@@ -59,10 +60,13 @@ public class Dns {
     public List<DnsItem> getItems(String domaine) {
         List<DnsItem> result = new ArrayList<>();
         for (DnsItem item : items) {
+            // comparer avec le domaine uniquement
             if (item.getNomMachine().getDomaine().equals(domaine)) {
                 result.add(item);
             }
         }
+        // optionnel : trier par nom ou IP
+        result.sort(Comparator.comparing(item -> item.getNomMachine().getNom()));
         return result;
     }
 
