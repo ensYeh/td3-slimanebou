@@ -19,5 +19,5 @@ public class RechercheNom implements Commande{
             System.out.println("ERREUR : IP introuvable !");
         }
     }
-    
+
 }
