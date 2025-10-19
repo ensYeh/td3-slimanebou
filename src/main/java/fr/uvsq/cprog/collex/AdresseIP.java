@@ -47,4 +47,8 @@ public class AdresseIP {
         return ip.hashCode();
     }
 
+    public String getAdresseIP (){
+        return ip;
+    }
+
 }

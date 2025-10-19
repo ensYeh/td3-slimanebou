@@ -13,7 +13,6 @@ public class ListerDomaine implements Commande{
     public ListerDomaine(Dns dns, String domaine) {
         this.dns = dns;
         this.domaine = domaine;
-        this.triParIP = triParIP;
     }
 
     @Override
