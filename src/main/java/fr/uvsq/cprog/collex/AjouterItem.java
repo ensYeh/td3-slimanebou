@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class AjouterItem implements Commande{
 
-    private Dns dns;
-    private AdresseIP ip;
-    private NomMachine nom;
+    private final Dns dns;
+    private final AdresseIP ip;
+    private final NomMachine nom;
 
     public AjouterItem(Dns dns, AdresseIP ip, NomMachine nom) {
         this.dns = dns;

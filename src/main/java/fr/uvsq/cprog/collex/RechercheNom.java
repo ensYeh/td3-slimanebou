@@ -2,8 +2,8 @@ package fr.uvsq.cprog.collex;
 
 public class RechercheNom implements Commande{
 
-    private Dns dns;
-    private AdresseIP ip;
+    private final Dns dns;
+    private final AdresseIP ip;
 
     public RechercheNom(Dns dns, AdresseIP ip) {
         this.dns = dns;

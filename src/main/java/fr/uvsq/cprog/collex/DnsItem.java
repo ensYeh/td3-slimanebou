@@ -2,8 +2,8 @@ package fr.uvsq.cprog.collex;
 
 public class DnsItem {
 
-    private NomMachine nomMachine;
-    private AdresseIP adresseIP;
+    private final NomMachine nomMachine;
+    private final AdresseIP adresseIP;
 
 
     public DnsItem(NomMachine nomMachine, AdresseIP adresseIP) {

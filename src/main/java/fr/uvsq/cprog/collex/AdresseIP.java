@@ -2,7 +2,7 @@ package fr.uvsq.cprog.collex;
 
 public class AdresseIP {
 
-    private String ip; // stocke l'adresse IP en chaîne de caractères
+    private final String ip; // stocke l'adresse IP en chaîne de caractères
 
     public AdresseIP(String ip) {
         if (!estValide(ip)) {

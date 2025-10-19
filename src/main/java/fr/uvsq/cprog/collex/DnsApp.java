@@ -41,8 +41,8 @@ public class DnsApp {
     public static void main( String[] args ) throws IOException {
 
         Dns dns = new Dns(Paths.get("dns.txt"));
-        ListerDomaine cmd = new ListerDomaine(dns, "uvsq.fr");
-        cmd.execute();  // doit afficher toutes les machines du domaine
+//        ListerDomaine cmd = new ListerDomaine(dns, "uvsq.fr");
+//        cmd.execute();  // doit afficher toutes les machines du domaine
 
         String fichierDNS = "dns.txt"; // Fichier contenant la base
         DnsApp app = new DnsApp(fichierDNS);

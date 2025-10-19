@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 
 public class DnsTUI {
-    private Dns dns;
-    private Scanner scanner;
+    private final Dns dns;
+    private final Scanner scanner;
 
     public DnsTUI(Dns dns) {
         this.dns = dns;
@@ -28,7 +28,9 @@ public class DnsTUI {
             } else if (parts[0].equalsIgnoreCase("ls")) {
                 boolean triParIP = parts.length > 1 && parts[1].equals("-a");
                 String domaine = parts[triParIP ? 2 : 1];
-                return new ListerDomaine(dns, domaine); // Tri à gérer plus tard
+                ListerDomaine cmd = new ListerDomaine(dns, domaine);
+                cmd.setTriParIP(triParIP);  // passe l'info au ListerDomaine
+                return cmd;
             } else if (ligne.matches("^(\\d{1,3}\\.){3}\\d{1,3}$")) {
                 AdresseIP ip = new AdresseIP(ligne);
                 return new RechercheNom(dns, ip);

@@ -2,9 +2,9 @@ package fr.uvsq.cprog.collex;
 
 public class NomMachine {
 
-    private String nomComplet; // www.uvsq.fr
-    private String nom;         // www
-    private String domaine;     // uvsq.fr
+    private final String nomComplet; // www.uvsq.fr
+    private final String nom;         // www
+    private final String domaine;     // uvsq.fr
 
     public NomMachine(String nomComplet) {
         // la chaine contient au moins un point sinon erreur

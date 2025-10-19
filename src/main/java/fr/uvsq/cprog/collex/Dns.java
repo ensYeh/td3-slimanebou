@@ -7,8 +7,8 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Dns {
-    private List<DnsItem> items;   // Liste de toutes les entrées DNS
-    private Path fichierDns;       // Fichier texte contenant la base
+    private final List<DnsItem> items;   // Liste de toutes les entrées DNS
+    private final Path fichierDns;       // Fichier texte contenant la base
 
 
     // constructeur qui chargera la base de données
@@ -91,13 +91,5 @@ public class Dns {
         }
         Files.write(fichierDns, lignes);
     }
-
-
-
-
-
-
-
-
 
 }
